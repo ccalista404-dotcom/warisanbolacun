@@ -44,6 +44,9 @@
         radial-gradient(900px 520px at 80% 90%, rgba(255, 255, 255, 0.1), transparent 60%),
         linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     }
+    /* Skip link - visible on focus for keyboard users */
+    .skip-link{position:absolute;left:8px;top:8px;padding:8px 12px;background:#000;color:#fff;border-radius:6px;z-index:999;transform:translateY(-120%);transition:transform .2s ease}
+    .skip-link:focus{transform:translateY(0)}
     .wrap{
       position:relative;z-index:1;
       min-height:100vh;
@@ -127,6 +130,8 @@
       -webkit-tap-highlight-color:transparent;
       transition: color 0.3s ease, text-shadow 0.3s ease;
     }
+    /* Visible focus style for keyboard users */
+    .btn:focus{outline:3px solid #00d9ff;outline-offset:3px}
     .btn:active{transform:scale(.97)}
     .footer{
       text-align:center;
@@ -147,8 +152,9 @@
   </style>
 </head>
 <body>
-  <div class="bgfx"></div>
-  <main class="wrap">
+  <a class="skip-link" href="#main-content">Lompat ke konten</a>
+  <div class="bgfx" aria-hidden="true"></div>
+  <main id="main-content" class="wrap">
     <section class="panel">
       
       <div class="ring banner">
@@ -177,26 +183,26 @@
       
       <div class="cta">
         <div class="ring">
-          <a href="https://warisanpro.info/" target="_blank" rel="noreferrer noopener" class="btn">LOGIN</a>
+          <a href="https://warisanpro.info/" target="_blank" rel="noopener noreferrer" class="btn" title="Login ke WARISANBOLA" aria-label="Login ke WARISANBOLA">LOGIN</a>
         </div>
         <div class="ring">
-          <a href="https://warisanbola.a1pola.com/" target="_blank" rel="noreferrer noopener" class="btn">DAFTAR</a>
+          <a href="https://warisanbola.a1pola.com/" target="_blank" rel="noopener noreferrer" class="btn" title="Daftar akun baru" aria-label="Daftar akun baru">DAFTAR</a>
         </div>        
         <div class="ring">
-          <a href="https://warisanbola2.info/" target="_blank" rel="noreferrer noopener" class="btn">LINK ALTERNATIF</a>
+          <a href="https://warisanbola2.info/" target="_blank" rel="noopener noreferrer" class="btn" title="Link alternatif" aria-label="Link alternatif">LINK ALTERNATIF</a>
         </div>
         <div class="ring">
-          <a href="https://warisanbola.a1pola.com/" target="_blank" rel="noreferrer noopener" class="btn">AKUN VVIP</a>
+          <a href="https://warisanbola.a1pola.com/" target="_blank" rel="noopener noreferrer" class="btn" title="Akun VVIP" aria-label="Akun VVIP">AKUN VVIP</a>
         </div>
-        <!-- Added contact links -->
+        <!-- Contact links (accessible) -->
         <div class="ring">
-          <a href="https://wa.me/6282124799596" target="_blank" rel="noopener noreferrer" class="btn">WHATSAPP</a>
-        </div>
-        <div class="ring">
-          <a href="https://t.me/Warisan_Signature" target="_blank" rel="noopener noreferrer" class="btn">TELEGRAM</a>
+          <a href="https://wa.me/6282124799596" target="_blank" rel="noopener noreferrer" class="btn" title="Buka WhatsApp" aria-label="Buka WhatsApp">WHATSAPP</a>
         </div>
         <div class="ring">
-          <a href="https://warbolcuan.com" target="_blank" rel="noopener noreferrer" class="btn">WEBSITE</a>
+          <a href="https://t.me/Warisan_Signature" target="_blank" rel="noopener noreferrer" class="btn" title="Buka Telegram" aria-label="Buka Telegram">TELEGRAM</a>
+        </div>
+        <div class="ring">
+          <a href="https://warbolcuan.com" target="_blank" rel="noopener noreferrer" class="btn" title="Kunjungi website" aria-label="Kunjungi website">WEBSITE</a>
         </div>
       </div>      
       
