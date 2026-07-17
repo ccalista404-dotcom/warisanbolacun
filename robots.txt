@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://warbolcuan.com/sitemap.xml
